@@ -37,7 +37,8 @@ class ListingShared extends Mailable
     {
         return $this->view('email.listing.shared.message')
                 ->subject("{$this->sender->full_name} shared a listing with you")
-                ->from('no-reply@passona-bliss.com');
+                ->from('no-reply@passona-bliss.com')
+                ->replyTo($this->sender->email);
 
     }
 }
