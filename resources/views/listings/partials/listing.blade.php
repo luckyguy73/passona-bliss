@@ -1,0 +1,1 @@
+@extends('listings.partials.base_listing')
