@@ -4,13 +4,13 @@
         @foreach($categories as $category)
             <optgroup label="{{ $category->name }}">
                 @foreach($category->children as $child)
-                    
+
                     @if(isset($listing) && $listing->category_id == $child->id  || old('category_id') == $child->id)
                         <option value="{{ $child->id }}" selected>{{ $child->name }}</option>
                     @else
                         <option value="{{ $child->id }}">{{ $child->name }}</option>
                     @endif
-                    
+
                 @endforeach
             </optgroup>
         @endforeach

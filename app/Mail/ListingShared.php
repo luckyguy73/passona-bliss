@@ -11,7 +11,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class ListingShared extends Mailable
 {
     use Queueable, SerializesModels;
-    
+
     public $listing;
     public $sender;
     public $body;
@@ -37,7 +37,7 @@ class ListingShared extends Mailable
     {
         return $this->view('email.listing.shared.message')
                 ->subject("{$this->sender->full_name} shared a listing with you")
-                ->from('no-reply@passonabliss.com');
-                
+                ->from('no-reply@passona-bliss.com');
+
     }
 }

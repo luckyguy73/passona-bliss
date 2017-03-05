@@ -11,7 +11,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class ListingContactCreated extends Mailable
 {
     use Queueable, SerializesModels;
-    
+
     public $listing;
     public $sender;
     public $body;
@@ -37,7 +37,7 @@ class ListingContactCreated extends Mailable
     {
         return $this->view('email.listing.contact.message')
                 ->subject("{$this->sender->full_name} has sent a message regarding your listing \"{$this->listing->title}\"")
-                ->from('no-reply@passonabliss.com')
+                ->from('no-reply@passona-bliss.com')
                 ->replyTo($this->sender->email);
     }
 }
