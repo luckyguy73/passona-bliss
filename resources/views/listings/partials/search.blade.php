@@ -4,7 +4,5 @@
     </listing-search>
 @else
     <listing-search :area-ids="{{ $area->descendants->pluck('id')->push($area->id) }}">
-    </listing-search>
-    <hr>
-    <span class="pull-right">powered by <img src="/public/images/algolia-logo.jpg"></span>
+    </listing-search>    
 @endif
