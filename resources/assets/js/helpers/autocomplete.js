@@ -17,6 +17,8 @@ export const listingsautocomplete = (selector, { categoryId, areaIds }) => {
     var sources = [{
         source: autocomplete.sources.hits(listings, { hitsPerPage: 5, filters: filters + ' AND live = 1' }),
         templates: {
+            footer: '<span class="search-foot">powered by <a href="https://www.algolia.com/" target="_blank" title="Algolia - Hosted cloud search as a service"><img src="/images/algolia-logo.jpg" width="47" height="15"></a></span>',
+
             header: () => {
                 if (typeof categoryId !== 'undefined') {
                     return '<div class="aa-suggestions-category">Other categories</div>';
@@ -40,6 +42,7 @@ export const listingsautocomplete = (selector, { categoryId, areaIds }) => {
                 hitsPerPage: 5, filters: '(' + areaFilters + ') AND category.id = ' + categoryId + ' AND live = 1'
             }),
             templates: {
+                footer: '<span class="search-foot">powered by <a href="https://www.algolia.com/" target="_blank" title="Algolia - Hosted cloud search as a service"><img src="/images/algolia-logo.jpg" width="47" height="15"></a></span>',
                 header: '<div class="aa-suggestions-category">This category</div>',
                 suggestion (suggestion) {
                     return '<span><a href="/' + suggestion.area.slug + '/' + 

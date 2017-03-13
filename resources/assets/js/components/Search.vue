@@ -5,8 +5,6 @@
                 id="listing-search" class="form-control" autocomplete="off">
         </div>
     </form>
-    <hr>
-    <span class="pull-right">powered by <img src="/images/algolia-logo.jpg"></span>
 </template>
 
 <script>
