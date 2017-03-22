@@ -13,7 +13,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }} 
+                {{ config('app.name') }} 
                 @if(empty($area->parent))
                     ({{ $area->name }})
                 @else
